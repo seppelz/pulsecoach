@@ -1,0 +1,177 @@
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 1; ]
+using Toybox.WatchUi;
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 2; ]
+using Toybox.Graphics;
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 3; ]
+using Toybox.Sensor;
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 5; ]
+class PulseCoachTestView extends WatchUi.View{
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 6; @position = 16; ]
+    private
+    var hrIterator;
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 8; ]
+    function initialize() as Void {
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_8_26_11_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" 9 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" 10 8 ]
+        %tmp.7 = getv ? :SensorIterator;
+        %tmp.4 = newc %tmp.7 ();
+        putv self :hrIterator %tmp.4;
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_8_26_11_4_stop:
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 13; ]
+    function onLayout(dc) {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 17; ]
+    function onUpdate(dc) {
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_17_26_41_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" 18 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_WHITE;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" 19 8 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" 22 8 ]
+        %tmp.9 = lgetv %dc;
+        %tmp.10 = getv function %tmp.9 :setColor;
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_WHITE;
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :COLOR_TRANSPARENT;
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.14);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" 23 8 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :drawText;
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :getWidth;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = 2;
+        %tmp.21 = div %tmp.19 %tmp.20;
+        %tmp.22 = lgetv %dc;
+        %tmp.23 = getv function %tmp.22 :getHeight;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        %tmp.25 = 2;
+        %tmp.26 = div %tmp.24 %tmp.25;
+        %tmp.27 = 30;
+        %tmp.28 = sub %tmp.26 %tmp.27;
+        %tmp.29 = getm $.Toybox.Graphics;
+        %tmp.30 = getv %tmp.29 :FONT_MEDIUM;
+        %tmp.31 = "PulseCoach Test";
+        %tmp.32 = getm $.Toybox.Graphics;
+        %tmp.33 = getv %tmp.32 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.15 %tmp.16(%tmp.21, %tmp.28, %tmp.30, %tmp.31, %tmp.33);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" 32 8 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_17_26_41_4_start" "_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_17_26_41_4_stop" ]
+        %info.1 = local;
+        %tmp.35 = getv ? :hrIterator;
+        %tmp.36 = getv function %tmp.35 :getHeartRate;
+        %tmp.37 = invoke %tmp.35 %tmp.36();
+        lputv %info.1 %tmp.37;
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" 33 8 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_17_26_41_4_start" "_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_17_26_41_4_stop" ]
+        %hrText.2 = local;
+        %tmp.38 = "HR: ";
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_33_31_33_64_begin:
+        %tmp.40 = lgetv %info.1;
+        %tmp.41 = null;
+        %tmp.42 = ne %tmp.40 %tmp.41;
+        bf %tmp.42 @_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_33_31_33_64_false;
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_33_31_33_64_true:
+        %tmp.43 = lgetv %info.1;
+        %tmp.44 = as %tmp.43 { (!Null) };
+        %tmp.45 = getv function %tmp.44 :toString;
+        %tmp.46 = invoke %tmp.44 %tmp.45();
+        push %tmp.46;
+        goto @_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_33_31_33_64_end;
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_33_31_33_64_false:
+        %tmp.47 = "--";
+        push %tmp.47;
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_33_31_33_64_end:
+        %tmp.48 = phi [%tmp.42 @_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_33_31_33_64_begin] [%tmp.46 @_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_33_31_33_64_true] [%tmp.47 @_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_33_31_33_64_false] [%tmp.48 @_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_33_31_33_64_end];
+        %tmp.49 = add %tmp.38 %tmp.48;
+        %tmp.50 = " bpm";
+        %tmp.51 = add %tmp.49 %tmp.50;
+        lputv %hrText.2 %tmp.51;
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" 34 8 ]
+        %tmp.52 = lgetv %dc;
+        %tmp.53 = getv function %tmp.52 :drawText;
+        %tmp.54 = lgetv %dc;
+        %tmp.55 = getv function %tmp.54 :getWidth;
+        %tmp.56 = invoke %tmp.54 %tmp.55();
+        %tmp.57 = 2;
+        %tmp.58 = div %tmp.56 %tmp.57;
+        %tmp.59 = lgetv %dc;
+        %tmp.60 = getv function %tmp.59 :getHeight;
+        %tmp.61 = invoke %tmp.59 %tmp.60();
+        %tmp.62 = 2;
+        %tmp.63 = div %tmp.61 %tmp.62;
+        %tmp.64 = 10;
+        %tmp.65 = add %tmp.63 %tmp.64;
+        %tmp.66 = getm $.Toybox.Graphics;
+        %tmp.67 = getv %tmp.66 :FONT_MEDIUM;
+        %tmp.69 = lgetv %hrText.2;
+        %tmp.70 = getm $.Toybox.Graphics;
+        %tmp.71 = getv %tmp.70 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.52 %tmp.53(%tmp.58, %tmp.65, %tmp.67, %tmp.69, %tmp.71);
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_17_26_41_4_stop:
+    }
+}
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 44; ]
+class SensorIterator{
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 44; ]
+    <init> {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 44; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 45; ]
+    function getHeartRate() {
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_45_28_48_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" 46 8 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_45_28_48_4_start" "_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_45_28_48_4_stop" ]
+        %info.1 = local;
+        %tmp.1 = getm $.Toybox.Sensor;
+        %tmp.2 = getv function %tmp.1 :getInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" 47 8 ]
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_47_15_47_47_begin:
+        %tmp.5 = lgetv %info.1;
+        %tmp.6 = null;
+        %tmp.7 = ne %tmp.5 %tmp.6;
+        bf %tmp.7 @_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_47_15_47_47_false;
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_47_15_47_47_true:
+        %tmp.8 = lgetv %info.1;
+        %tmp.9 = as %tmp.8 { (!Null) };
+        %tmp.10 = getv %tmp.9 :heartRate;
+        push %tmp.10;
+        goto @_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_47_15_47_47_end;
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_47_15_47_47_false:
+        %tmp.11 = null;
+        push %tmp.11;
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_47_15_47_47_end:
+        %tmp.12 = phi [%tmp.7 @_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_47_15_47_47_begin] [%tmp.10 @_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_47_15_47_47_true] [%tmp.11 @_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_47_15_47_47_false] [%tmp.12 @_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_47_15_47_47_end];
+        ret %tmp.12;
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachTestView_mc_45_28_48_4_stop:
+    }
+}
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,309 @@
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 1; ]
+using Toybox.WatchUi;
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 2; ]
+using Toybox.Graphics;
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 3; ]
+using Toybox.Sensor;
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 5; ]
+class PulseCoachView extends WatchUi.View{
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 6; @position = 16; ]
+    private
+    var dataManager;
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 7; @position = 16; ]
+    private
+    var currentHR = "--";
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 8; @position = 16; ]
+    private
+    var currentZone = 0;
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 9; @position = 16; ]
+    private
+    var currentCadence = "--";
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 11; ]
+    function initialize(dataMgr) as Void {
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_11_33_15_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 12 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 13 8 ]
+        %tmp.5 = lgetv %dataMgr;
+        putv self :dataManager %tmp.5;
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 14 8 ]
+        %tmp.7 = getv ? :dataManager;
+        %tmp.8 = getv function %tmp.7 :setCallback;
+        %tmp.9 = self;
+        %tmp.10 = getv function %tmp.9 :method;
+        %tmp.12 = const :onDataUpdate;
+        %tmp.13 = invoke %tmp.9 %tmp.10(%tmp.12);
+        invoke %tmp.7 %tmp.8(%tmp.13);
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_11_33_15_4_stop:
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 18; ]
+    function onShow() {
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_18_22_20_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 19 8 ]
+        %tmp.2 = getv ? :dataManager;
+        %tmp.3 = getv function %tmp.2 :start;
+        invoke %tmp.2 %tmp.3();
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_18_22_20_4_stop:
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 23; ]
+    function onHide() {
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_23_22_25_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 24 8 ]
+        %tmp.2 = getv ? :dataManager;
+        %tmp.3 = getv function %tmp.2 :stop;
+        invoke %tmp.2 %tmp.3();
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_23_22_25_4_stop:
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 28; ]
+    function onDataUpdate(hr, zone, cadence) {
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_28_45_33_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 29 8 ]
+        %tmp.2 = lgetv %hr;
+        putv self :currentHR %tmp.2;
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 30 8 ]
+        %tmp.4 = lgetv %zone;
+        putv self :currentZone %tmp.4;
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 31 8 ]
+        %tmp.6 = lgetv %cadence;
+        putv self :currentCadence %tmp.6;
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 32 8 ]
+        %tmp.7 = getm $.Toybox.WatchUi;
+        %tmp.8 = getv function %tmp.7 :requestUpdate;
+        invoke %tmp.7 %tmp.8();
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_28_45_33_4_stop:
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 36; ]
+    function onUpdate(dc) {
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_36_26_103_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 38 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 39 8 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 42 8 ]
+        %tmp.9 = lgetv %dc;
+        %tmp.10 = getv function %tmp.9 :setColor;
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_WHITE;
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :COLOR_TRANSPARENT;
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.14);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 45 8 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :drawText;
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :getWidth;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = 2;
+        %tmp.21 = div %tmp.19 %tmp.20;
+        %tmp.22 = 10;
+        %tmp.23 = getm $.Toybox.Graphics;
+        %tmp.24 = getv %tmp.23 :FONT_SMALL;
+        %tmp.25 = "PulseCoach";
+        %tmp.26 = getm $.Toybox.Graphics;
+        %tmp.27 = getv %tmp.26 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.15 %tmp.16(%tmp.21, %tmp.22, %tmp.24, %tmp.25, %tmp.27);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 54 8 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_36_26_103_4_start" "_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_36_26_103_4_stop" ]
+        %zoneColors.1 = local;
+        %tmp.28 = newa 5;
+        %tmp.29 = getm $.Toybox.Graphics;
+        %tmp.30 = getv %tmp.29 :COLOR_RED;
+        %tmp.31 = dup %tmp.28;
+        %tmp.32 = aputv %tmp.31 0 %tmp.30;
+        %tmp.33 = getm $.Toybox.Graphics;
+        %tmp.34 = getv %tmp.33 :COLOR_GREEN;
+        %tmp.35 = dup %tmp.32;
+        %tmp.36 = aputv %tmp.35 1 %tmp.34;
+        %tmp.37 = getm $.Toybox.Graphics;
+        %tmp.38 = getv %tmp.37 :COLOR_YELLOW;
+        %tmp.39 = dup %tmp.36;
+        %tmp.40 = aputv %tmp.39 2 %tmp.38;
+        %tmp.41 = getm $.Toybox.Graphics;
+        %tmp.42 = getv %tmp.41 :COLOR_ORANGE;
+        %tmp.43 = dup %tmp.40;
+        %tmp.44 = aputv %tmp.43 3 %tmp.42;
+        %tmp.45 = getm $.Toybox.Graphics;
+        %tmp.46 = getv %tmp.45 :COLOR_RED;
+        %tmp.47 = dup %tmp.44;
+        %tmp.48 = aputv %tmp.47 4 %tmp.46;
+        lputv %zoneColors.1 %tmp.48;
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 61 8 ]
+        %tmp.49 = lgetv %dc;
+        %tmp.50 = getv function %tmp.49 :setColor;
+        %tmp.52 = lgetv %zoneColors.1;
+        %tmp.54 = getv ? :currentZone;
+        %tmp.55 = agetv %tmp.52 %tmp.54;
+        %tmp.56 = getm $.Toybox.Graphics;
+        %tmp.57 = getv %tmp.56 :COLOR_TRANSPARENT;
+        invoke %tmp.49 %tmp.50(%tmp.55, %tmp.57);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 62 8 ]
+        %tmp.58 = lgetv %dc;
+        %tmp.59 = getv function %tmp.58 :drawText;
+        %tmp.60 = lgetv %dc;
+        %tmp.61 = getv function %tmp.60 :getWidth;
+        %tmp.62 = invoke %tmp.60 %tmp.61();
+        %tmp.63 = 2;
+        %tmp.64 = div %tmp.62 %tmp.63;
+        %tmp.65 = lgetv %dc;
+        %tmp.66 = getv function %tmp.65 :getHeight;
+        %tmp.67 = invoke %tmp.65 %tmp.66();
+        %tmp.68 = 2;
+        %tmp.69 = div %tmp.67 %tmp.68;
+        %tmp.70 = 40;
+        %tmp.71 = sub %tmp.69 %tmp.70;
+        %tmp.72 = getm $.Toybox.Graphics;
+        %tmp.73 = getv %tmp.72 :FONT_LARGE;
+        %tmp.75 = getv ? :currentHR;
+        %tmp.76 = getv function %tmp.75 :toString;
+        %tmp.77 = invoke %tmp.75 %tmp.76();
+        %tmp.78 = " bpm";
+        %tmp.79 = add %tmp.77 %tmp.78;
+        %tmp.80 = getm $.Toybox.Graphics;
+        %tmp.81 = getv %tmp.80 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.58 %tmp.59(%tmp.64, %tmp.71, %tmp.73, %tmp.79, %tmp.81);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 71 8 ]
+        %tmp.82 = lgetv %dc;
+        %tmp.83 = getv function %tmp.82 :drawText;
+        %tmp.84 = lgetv %dc;
+        %tmp.85 = getv function %tmp.84 :getWidth;
+        %tmp.86 = invoke %tmp.84 %tmp.85();
+        %tmp.87 = 2;
+        %tmp.88 = div %tmp.86 %tmp.87;
+        %tmp.89 = lgetv %dc;
+        %tmp.90 = getv function %tmp.89 :getHeight;
+        %tmp.91 = invoke %tmp.89 %tmp.90();
+        %tmp.92 = 2;
+        %tmp.93 = div %tmp.91 %tmp.92;
+        %tmp.94 = getm $.Toybox.Graphics;
+        %tmp.95 = getv %tmp.94 :FONT_MEDIUM;
+        %tmp.96 = "Zone ";
+        %tmp.98 = getv ? :currentZone;
+        %tmp.99 = add %tmp.96 %tmp.98;
+        %tmp.100 = getm $.Toybox.Graphics;
+        %tmp.101 = getv %tmp.100 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.82 %tmp.83(%tmp.88, %tmp.93, %tmp.95, %tmp.99, %tmp.101);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 80 8 ]
+        %tmp.102 = lgetv %dc;
+        %tmp.103 = getv function %tmp.102 :setColor;
+        %tmp.104 = getm $.Toybox.Graphics;
+        %tmp.105 = getv %tmp.104 :COLOR_WHITE;
+        %tmp.106 = getm $.Toybox.Graphics;
+        %tmp.107 = getv %tmp.106 :COLOR_TRANSPARENT;
+        invoke %tmp.102 %tmp.103(%tmp.105, %tmp.107);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 81 8 ]
+        %tmp.108 = lgetv %dc;
+        %tmp.109 = getv function %tmp.108 :drawText;
+        %tmp.110 = lgetv %dc;
+        %tmp.111 = getv function %tmp.110 :getWidth;
+        %tmp.112 = invoke %tmp.110 %tmp.111();
+        %tmp.113 = 2;
+        %tmp.114 = div %tmp.112 %tmp.113;
+        %tmp.115 = lgetv %dc;
+        %tmp.116 = getv function %tmp.115 :getHeight;
+        %tmp.117 = invoke %tmp.115 %tmp.116();
+        %tmp.118 = 2;
+        %tmp.119 = div %tmp.117 %tmp.118;
+        %tmp.120 = 40;
+        %tmp.121 = add %tmp.119 %tmp.120;
+        %tmp.122 = getm $.Toybox.Graphics;
+        %tmp.123 = getv %tmp.122 :FONT_MEDIUM;
+        %tmp.125 = getv ? :currentCadence;
+        %tmp.126 = getv function %tmp.125 :toString;
+        %tmp.127 = invoke %tmp.125 %tmp.126();
+        %tmp.128 = " spm";
+        %tmp.129 = add %tmp.127 %tmp.128;
+        %tmp.130 = getm $.Toybox.Graphics;
+        %tmp.131 = getv %tmp.130 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.108 %tmp.109(%tmp.114, %tmp.121, %tmp.123, %tmp.129, %tmp.131);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 90 8 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_36_26_103_4_start" "_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_36_26_103_4_stop" ]
+        %centerX.2 = local;
+        %tmp.132 = lgetv %dc;
+        %tmp.133 = getv function %tmp.132 :getWidth;
+        %tmp.134 = invoke %tmp.132 %tmp.133();
+        %tmp.135 = 2;
+        %tmp.136 = div %tmp.134 %tmp.135;
+        lputv %centerX.2 %tmp.136;
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 91 8 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_36_26_103_4_start" "_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_36_26_103_4_stop" ]
+        %centerY.3 = local;
+        %tmp.137 = lgetv %dc;
+        %tmp.138 = getv function %tmp.137 :getHeight;
+        %tmp.139 = invoke %tmp.137 %tmp.138();
+        %tmp.140 = 30;
+        %tmp.141 = sub %tmp.139 %tmp.140;
+        lputv %centerY.3 %tmp.141;
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 92 8 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_36_26_103_4_start" "_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_36_26_103_4_stop" ]
+        %radius.4 = local;
+        %tmp.142 = 15;
+        lputv %radius.4 %tmp.142;
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 95 8 ]
+        %tmp.143 = lgetv %dc;
+        %tmp.144 = getv function %tmp.143 :setColor;
+        %tmp.145 = getm $.Toybox.Graphics;
+        %tmp.146 = getv %tmp.145 :COLOR_DK_GRAY;
+        %tmp.147 = getm $.Toybox.Graphics;
+        %tmp.148 = getv %tmp.147 :COLOR_TRANSPARENT;
+        invoke %tmp.143 %tmp.144(%tmp.146, %tmp.148);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 96 8 ]
+        %tmp.149 = lgetv %dc;
+        %tmp.150 = getv function %tmp.149 :fillCircle;
+        %tmp.152 = lgetv %centerX.2;
+        %tmp.154 = lgetv %centerY.3;
+        %tmp.156 = lgetv %radius.4;
+        invoke %tmp.149 %tmp.150(%tmp.152, %tmp.154, %tmp.156);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 99 8 ]
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_99_8_102_8_if_stmt:
+        %tmp.158 = getv ? :currentZone;
+        %tmp.159 = 0;
+        %tmp.160 = gt %tmp.158 %tmp.159;
+        bf %tmp.160 @_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_99_8_102_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_99_8_102_8_if_true:
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_99_29_102_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 100 12 ]
+        %tmp.161 = lgetv %dc;
+        %tmp.162 = getv function %tmp.161 :setColor;
+        %tmp.164 = lgetv %zoneColors.1;
+        %tmp.166 = getv ? :currentZone;
+        %tmp.167 = agetv %tmp.164 %tmp.166;
+        %tmp.168 = getm $.Toybox.Graphics;
+        %tmp.169 = getv %tmp.168 :COLOR_TRANSPARENT;
+        invoke %tmp.161 %tmp.162(%tmp.167, %tmp.169);
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" 101 12 ]
+        %tmp.170 = lgetv %dc;
+        %tmp.171 = getv function %tmp.170 :fillCircle;
+        %tmp.173 = lgetv %centerX.2;
+        %tmp.175 = lgetv %centerY.3;
+        %tmp.177 = lgetv %radius.4;
+        %tmp.179 = getv ? :currentZone;
+        %tmp.180 = mul %tmp.177 %tmp.179;
+        %tmp.181 = 4;
+        %tmp.182 = div %tmp.180 %tmp.181;
+        invoke %tmp.170 %tmp.171(%tmp.173, %tmp.175, %tmp.182);
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_99_29_102_8_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_99_8_102_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_99_8_102_8_if_end:
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachView_mc_36_26_103_4_stop:
+    }
+}
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc"; @line = 1; ]
+<init> {
+}

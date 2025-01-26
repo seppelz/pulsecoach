@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/home/sebastian/MEGA/PulseCoach/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="1" lineNum="5" parent="globals/PulseCoachView" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435479" symbol="&lt;init&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" id="3" lineNum="4" parent="globals/PulseCoachApp" pc="268435503" symbol="&lt;init&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="4" lineNum="5" parent="globals/PulseCoachTestView" pc="268435522" symbol="&lt;init&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" id="5" lineNum="18" parent="globals/AudioManager" pc="268435541" symbol="playPrompt"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" id="5" lineNum="19" parent="globals/AudioManager" pc="268435545" symbol="playPrompt"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" id="5" lineNum="21" parent="globals/AudioManager" pc="268435567" symbol="playPrompt"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" id="5" lineNum="22" parent="globals/AudioManager" pc="268435582" symbol="playPrompt"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" id="5" lineNum="32" parent="globals/AudioManager" pc="268435681" symbol="playPrompt"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" id="5" lineNum="33" parent="globals/AudioManager" pc="268435697" symbol="playPrompt"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" id="5" lineNum="37" parent="globals/AudioManager" pc="268435724" symbol="playPrompt"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" id="5" lineNum="38" parent="globals/AudioManager" pc="268435739" symbol="playPrompt"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" id="5" lineNum="48" parent="globals/AudioManager" pc="268436153" symbol="playPrompt"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" id="5" lineNum="49" parent="globals/AudioManager" pc="268436169" symbol="playPrompt"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" id="6" lineNum="6" parent="globals/AudioManager" pc="268436200" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" id="6" lineNum="7" parent="globals/AudioManager" pc="268436202" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="7" lineNum="18" parent="globals/PulseCoachView" pc="268436308" symbol="onShow"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="7" lineNum="19" parent="globals/PulseCoachView" pc="268436310" symbol="onShow"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="8" lineNum="28" parent="globals/PulseCoachView" pc="268436329" symbol="onDataUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="8" lineNum="29" parent="globals/PulseCoachView" pc="268436331" symbol="onDataUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="8" lineNum="30" parent="globals/PulseCoachView" pc="268436341" symbol="onDataUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="8" lineNum="31" parent="globals/PulseCoachView" pc="268436351" symbol="onDataUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="8" lineNum="32" parent="globals/PulseCoachView" pc="268436361" symbol="onDataUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="9" lineNum="11" parent="globals/PulseCoachView" pc="268436378" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="9" lineNum="12" parent="globals/PulseCoachView" pc="268436380" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="9" lineNum="13" parent="globals/PulseCoachView" pc="268436398" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="9" lineNum="14" parent="globals/PulseCoachView" pc="268436408" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="10" lineNum="23" parent="globals/PulseCoachView" pc="268436443" symbol="onHide"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="10" lineNum="24" parent="globals/PulseCoachView" pc="268436445" symbol="onHide"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="36" parent="globals/PulseCoachView" pc="268436464" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="38" parent="globals/PulseCoachView" pc="268436468" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="39" parent="globals/PulseCoachView" pc="268436490" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="42" parent="globals/PulseCoachView" pc="268436502" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="45" parent="globals/PulseCoachView" pc="268436524" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="54" parent="globals/PulseCoachView" pc="268436573" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="61" parent="globals/PulseCoachView" pc="268436646" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="62" parent="globals/PulseCoachView" pc="268436674" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="71" parent="globals/PulseCoachView" pc="268436759" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="80" parent="globals/PulseCoachView" pc="268436829" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="81" parent="globals/PulseCoachView" pc="268436851" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="90" parent="globals/PulseCoachView" pc="268436936" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="91" parent="globals/PulseCoachView" pc="268436955" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="92" parent="globals/PulseCoachView" pc="268436974" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="95" parent="globals/PulseCoachView" pc="268436981" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="96" parent="globals/PulseCoachView" pc="268437003" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="99" parent="globals/PulseCoachView" pc="268437021" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="100" parent="globals/PulseCoachView" pc="268437038" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachView.mc" id="11" lineNum="101" parent="globals/PulseCoachView" pc="268437066" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" id="12" lineNum="15" parent="globals/PulseCoachApp" pc="268437103" symbol="onStart"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" id="13" lineNum="23" parent="globals/PulseCoachApp" pc="268437106" symbol="getInitialView"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" id="13" lineNum="24" parent="globals/PulseCoachApp" pc="268437108" symbol="getInitialView"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" id="14" lineNum="8" parent="globals/PulseCoachApp" pc="268437157" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" id="14" lineNum="9" parent="globals/PulseCoachApp" pc="268437159" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" id="14" lineNum="10" parent="globals/PulseCoachApp" pc="268437177" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" id="14" lineNum="11" parent="globals/PulseCoachApp" pc="268437211" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" id="15" lineNum="19" parent="globals/PulseCoachApp" pc="268437254" symbol="onStop"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="16" lineNum="13" parent="globals/PulseCoachTestView" pc="268437257" symbol="onLayout"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="17" lineNum="8" parent="globals/PulseCoachTestView" pc="268437260" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="17" lineNum="9" parent="globals/PulseCoachTestView" pc="268437262" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="17" lineNum="10" parent="globals/PulseCoachTestView" pc="268437280" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="18" lineNum="17" parent="globals/PulseCoachTestView" pc="268437315" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="18" lineNum="18" parent="globals/PulseCoachTestView" pc="268437319" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="18" lineNum="19" parent="globals/PulseCoachTestView" pc="268437341" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="18" lineNum="22" parent="globals/PulseCoachTestView" pc="268437353" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="18" lineNum="23" parent="globals/PulseCoachTestView" pc="268437375" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="18" lineNum="32" parent="globals/PulseCoachTestView" pc="268437442" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="18" lineNum="33" parent="globals/PulseCoachTestView" pc="268437461" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="18" lineNum="34" parent="globals/PulseCoachTestView" pc="268437501" symbol="onUpdate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="107" parent="globals/DataManager" pc="268437566" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="109" parent="globals/DataManager" pc="268437570" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="110" parent="globals/DataManager" pc="268437580" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="111" parent="globals/DataManager" pc="268437593" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="112" parent="globals/DataManager" pc="268437623" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="113" parent="globals/DataManager" pc="268437640" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="114" parent="globals/DataManager" pc="268437650" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="116" parent="globals/DataManager" pc="268437656" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="120" parent="globals/DataManager" pc="268437685" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="121" parent="globals/DataManager" pc="268437705" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="122" parent="globals/DataManager" pc="268437722" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="123" parent="globals/DataManager" pc="268437745" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="124" parent="globals/DataManager" pc="268437758" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="125" parent="globals/DataManager" pc="268437775" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="126" parent="globals/DataManager" pc="268437798" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="127" parent="globals/DataManager" pc="268437811" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="129" parent="globals/DataManager" pc="268437825" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="130" parent="globals/DataManager" pc="268437839" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="132" parent="globals/DataManager" pc="268437865" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="19" lineNum="134" parent="globals/DataManager" pc="268437888" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="20" lineNum="65" parent="globals/DataManager" pc="268437905" symbol="start"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="20" lineNum="67" parent="globals/DataManager" pc="268437909" symbol="start"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="20" lineNum="73" parent="globals/DataManager" pc="268437963" symbol="start"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="21" lineNum="61" parent="globals/DataManager" pc="268437998" symbol="setCallback"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="21" lineNum="62" parent="globals/DataManager" pc="268438000" symbol="setCallback"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="139" parent="globals/DataManager" pc="268438011" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="141" parent="globals/DataManager" pc="268438015" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="142" parent="globals/DataManager" pc="268438035" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="143" parent="globals/DataManager" pc="268438053" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="144" parent="globals/DataManager" pc="268438066" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="145" parent="globals/DataManager" pc="268438080" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="146" parent="globals/DataManager" pc="268438103" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="149" parent="globals/DataManager" pc="268438116" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="150" parent="globals/DataManager" pc="268438123" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="152" parent="globals/DataManager" pc="268438145" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="153" parent="globals/DataManager" pc="268438156" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="154" parent="globals/DataManager" pc="268438182" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="155" parent="globals/DataManager" pc="268438196" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="157" parent="globals/DataManager" pc="268438222" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="22" lineNum="159" parent="globals/DataManager" pc="268438245" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="38" parent="globals/DataManager" pc="268438262" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="40" parent="globals/DataManager" pc="268438266" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="41" parent="globals/DataManager" pc="268438288" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="42" parent="globals/DataManager" pc="268438310" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="43" parent="globals/DataManager" pc="268438332" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="45" parent="globals/DataManager" pc="268438354" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="46" parent="globals/DataManager" pc="268438382" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="50" parent="globals/DataManager" pc="268438439" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="51" parent="globals/DataManager" pc="268438461" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="52" parent="globals/DataManager" pc="268438468" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="55" parent="globals/DataManager" pc="268438490" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="56" parent="globals/DataManager" pc="268438512" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="23" lineNum="57" parent="globals/DataManager" pc="268438519" symbol="loadSettings"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="24" lineNum="76" parent="globals/DataManager" pc="268438542" symbol="stop"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="24" lineNum="77" parent="globals/DataManager" pc="268438544" symbol="stop"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="24" lineNum="78" parent="globals/DataManager" pc="268438560" symbol="stop"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="24" lineNum="79" parent="globals/DataManager" pc="268438573" symbol="stop"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="83" parent="globals/DataManager" pc="268438595" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="84" parent="globals/DataManager" pc="268438599" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="85" parent="globals/DataManager" pc="268438606" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="86" parent="globals/DataManager" pc="268438613" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="88" parent="globals/DataManager" pc="268438636" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="89" parent="globals/DataManager" pc="268438660" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="90" parent="globals/DataManager" pc="268438670" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="91" parent="globals/DataManager" pc="268438690" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="94" parent="globals/DataManager" pc="268438712" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="95" parent="globals/DataManager" pc="268438736" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="96" parent="globals/DataManager" pc="268438746" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="97" parent="globals/DataManager" pc="268438766" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="102" parent="globals/DataManager" pc="268438788" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="25" lineNum="103" parent="globals/DataManager" pc="268438801" symbol="onSensorData"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="26" lineNum="24" parent="globals/DataManager" pc="268438835" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="26" lineNum="26" parent="globals/DataManager" pc="268438837" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="26" lineNum="27" parent="globals/DataManager" pc="268438903" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="26" lineNum="28" parent="globals/DataManager" pc="268438916" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="26" lineNum="30" parent="globals/DataManager" pc="268438929" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="26" lineNum="31" parent="globals/DataManager" pc="268438963" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="26" lineNum="32" parent="globals/DataManager" pc="268438973" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="26" lineNum="33" parent="globals/DataManager" pc="268438986" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="26" lineNum="34" parent="globals/DataManager" pc="268438999" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" id="26" lineNum="35" parent="globals/DataManager" pc="268439012" symbol="initialize"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="28" lineNum="45" parent="globals/SensorIterator" pc="268439026" symbol="getHeartRate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="28" lineNum="46" parent="globals/SensorIterator" pc="268439030" symbol="getHeartRate"/>
+        <entry filename="/home/sebastian/MEGA/PulseCoach/source/PulseCoachTestView.mc" id="28" lineNum="47" parent="globals/SensorIterator" pc="268439047" symbol="getHeartRate"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="24" symbol="&lt;globals/DataManager/&lt;&gt;currentZone&gt;"/>
+        <entry field="true" id="21" symbol="&lt;globals/DataManager/&lt;&gt;audioManager&gt;"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="7" object="true" symbol="PulseCoachApp"/>
+        <entry id="10" object="true" symbol="SensorIterator"/>
+        <entry field="true" id="13" symbol="&lt;globals/PulseCoachView/&lt;&gt;currentCadence&gt;"/>
+        <entry id="9" object="true" symbol="PulseCoachView"/>
+        <entry id="23" method="true" symbol="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;"/>
+        <entry field="true" id="28" symbol="&lt;globals/DataManager/&lt;&gt;lastHRFeedbackTime&gt;"/>
+        <entry field="true" id="33" symbol="&lt;globals/DataManager/&lt;&gt;targetSpeed&gt;"/>
+        <entry field="true" id="18" symbol="&lt;globals/PulseCoachApp/&lt;&gt;audioManager&gt;"/>
+        <entry id="8390135" symbol="enableAccelerometer"/>
+        <entry field="true" id="19" symbol="&lt;globals/PulseCoachApp/&lt;&gt;dataManager&gt;"/>
+        <entry field="true" id="34" symbol="&lt;globals/DataManager/&lt;&gt;timer&gt;"/>
+        <entry id="5" object="true" symbol="AudioManager"/>
+        <entry field="true" id="30" symbol="&lt;globals/DataManager/&lt;&gt;minStrideLength&gt;"/>
+        <entry id="17" method="true" symbol="onDataUpdate"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="31" method="true" symbol="onSensorData"/>
+        <entry field="true" id="38" symbol="AppName"/>
+        <entry id="4" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="36" method="true" symbol="getHeartRate"/>
+        <entry field="true" id="39" symbol="HeartRateLabel"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry field="true" id="27" symbol="&lt;globals/DataManager/&lt;&gt;lastFeedbackTime&gt;"/>
+        <entry id="8390425" module="true" symbol="Properties"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="8388959" symbol="cadence"/>
+        <entry id="8" object="true" symbol="PulseCoachTestView"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="6" object="true" symbol="DataManager"/>
+        <entry field="true" id="15" symbol="&lt;globals/PulseCoachView/&lt;&gt;currentZone&gt;"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="8390134" symbol="sampleRate"/>
+        <entry field="true" id="35" symbol="&lt;globals/DataManager/&lt;&gt;uiCallback&gt;"/>
+        <entry id="8388987" method="true" symbol="vibrate"/>
+        <entry field="true" id="25" symbol="&lt;globals/DataManager/&lt;&gt;hrZones&gt;"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="41" symbol="enableHeartRate"/>
+        <entry id="8388699" method="true" symbol="stop"/>
+        <entry field="true" id="26" symbol="&lt;globals/DataManager/&lt;&gt;lastCadenceFeedbackTime&gt;"/>
+        <entry id="8388985" method="true" symbol="playTone"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="40" symbol="TestMessage"/>
+        <entry field="true" id="20" symbol="&lt;globals/PulseCoachTestView/&lt;&gt;hrIterator&gt;"/>
+        <entry field="true" id="37" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8388643" module="true" symbol="Sensor"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry field="true" id="14" symbol="&lt;globals/PulseCoachView/&lt;&gt;currentHR&gt;"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="8388960" symbol="heartRate"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="16" symbol="&lt;globals/PulseCoachView/&lt;&gt;dataManager&gt;"/>
+        <entry id="8389808" symbol="period"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8388646" module="true" object="true" symbol="Timer"/>
+        <entry id="32" method="true" symbol="setCallback"/>
+        <entry id="8388636" module="true" symbol="Attention"/>
+        <entry id="29" method="true" symbol="loadSettings"/>
+        <entry id="8388698" method="true" symbol="start"/>
+        <entry id="22" method="true" symbol="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry field="true" id="12" symbol="&lt;globals/AudioManager/&lt;&gt;prompts&gt;"/>
+        <entry id="11" method="true" symbol="playPrompt"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268436199" name="promptKey" stackId="1" startPc="268435541"/>
+        <entry endPc="268435720" name="toneProfile" stackId="2" startPc="268435582"/>
+        <entry endPc="268436192" name="vibeProfiles" stackId="3" startPc="268435739"/>
+        <entry arg="true" endPc="268436377" name="hr" stackId="1" startPc="268436329"/>
+        <entry arg="true" endPc="268436377" name="zone" stackId="2" startPc="268436329"/>
+        <entry arg="true" endPc="268436377" name="cadence" stackId="3" startPc="268436329"/>
+        <entry arg="true" endPc="268436442" name="dataMgr" stackId="1" startPc="268436378"/>
+        <entry arg="true" endPc="268437102" name="dc" stackId="1" startPc="268436464"/>
+        <entry endPc="268437101" name="zoneColors" stackId="2" startPc="268436468"/>
+        <entry endPc="268437101" name="centerX" stackId="3" startPc="268436468"/>
+        <entry endPc="268437101" name="centerY" stackId="4" startPc="268436468"/>
+        <entry endPc="268437101" name="radius" stackId="5" startPc="268436468"/>
+        <entry arg="true" endPc="268437565" name="dc" stackId="1" startPc="268437315"/>
+        <entry endPc="268437564" name="info" stackId="2" startPc="268437319"/>
+        <entry endPc="268437564" name="hrText" stackId="3" startPc="268437319"/>
+        <entry arg="true" endPc="268437904" name="hr" stackId="1" startPc="268437566"/>
+        <entry arg="true" endPc="268437904" name="currentTime" stackId="2" startPc="268437566"/>
+        <entry endPc="268437903" name="oldZone" stackId="3" startPc="268437570"/>
+        <entry endPc="268437684" name="i" stackId="4" startPc="268437623"/>
+        <entry endPc="268437996" name="options" stackId="1" startPc="268437909"/>
+        <entry arg="true" endPc="268438010" name="callback" stackId="1" startPc="268437998"/>
+        <entry arg="true" endPc="268438261" name="cadence" stackId="1" startPc="268438011"/>
+        <entry arg="true" endPc="268438261" name="currentTime" stackId="2" startPc="268438011"/>
+        <entry endPc="268438254" name="strideLength" stackId="3" startPc="268438053"/>
+        <entry endPc="268438254" name="currentSpeed" stackId="4" startPc="268438116"/>
+        <entry endPc="268438254" name="speedDiff" stackId="5" startPc="268438116"/>
+        <entry endPc="268438540" name="z1" stackId="1" startPc="268438266"/>
+        <entry endPc="268438540" name="z2" stackId="2" startPc="268438266"/>
+        <entry endPc="268438540" name="z3" stackId="3" startPc="268438266"/>
+        <entry endPc="268438540" name="z4" stackId="4" startPc="268438266"/>
+        <entry endPc="268438540" name="tgtSpeed" stackId="5" startPc="268438266"/>
+        <entry endPc="268438540" name="minStride" stackId="6" startPc="268438266"/>
+        <entry arg="true" endPc="268438834" name="data" stackId="1" startPc="268438595"/>
+        <entry endPc="268438833" name="hr" stackId="2" startPc="268438599"/>
+        <entry endPc="268438833" name="cadence" stackId="3" startPc="268438599"/>
+        <entry endPc="268438833" name="currentTime" stackId="4" startPc="268438599"/>
+        <entry arg="true" endPc="268439025" name="audioMgr" stackId="1" startPc="268438835"/>
+        <entry endPc="268439066" name="info" stackId="1" startPc="268439030"/>
+    </localVars>
+    <deviceInfo partNumber="006-B3077-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HeartRateLabel"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="TestMessage"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="55" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/AudioManager" offset="150" parentId="globals" symbolId="AudioManager" type="class"/>
+        <dataEntry label="globals/PulseCoachView" offset="213" parentId="globals" symbolId="PulseCoachView" type="class"/>
+        <dataEntry label="globals/Rez" offset="324" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/PulseCoachApp" offset="371" parentId="globals" symbolId="PulseCoachApp" type="class"/>
+        <dataEntry label="globals/PulseCoachTestView" offset="458" parentId="globals" symbolId="PulseCoachTestView" type="class"/>
+        <dataEntry label="globals/DataManager" offset="529" parentId="globals" symbolId="DataManager" type="class"/>
+        <dataEntry label="globals/SensorIterator" offset="712" parentId="globals" symbolId="SensorIterator" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="767" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="806" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="AudioManager">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435478" name="&lt;init&gt;" parent="PulseCoachView" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435502" name="&lt;init&gt;" parent="Rez" startPc="268435479">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435521" name="&lt;init&gt;" parent="PulseCoachApp" startPc="268435503">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435540" name="&lt;init&gt;" parent="PulseCoachTestView" startPc="268435522">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="DataManager">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="SensorIterator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436199" name="playPrompt" parent="AudioManager" startPc="268435541">
+            <param id="promptKey"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436307" name="initialize" parent="AudioManager" startPc="268436200">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436328" name="onShow" parent="PulseCoachView" startPc="268436308">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436377" name="onDataUpdate" parent="PulseCoachView" startPc="268436329">
+            <param id="hr"/>
+            <param id="zone"/>
+            <param id="cadence"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436442" name="initialize" parent="PulseCoachView" startPc="268436378">
+            <param id="dataMgr"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436463" name="onHide" parent="PulseCoachView" startPc="268436443">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437102" name="onUpdate" parent="PulseCoachView" startPc="268436464">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437105" name="onStart" parent="PulseCoachApp" startPc="268437103">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437156" name="getInitialView" parent="PulseCoachApp" startPc="268437106">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437253" name="initialize" parent="PulseCoachApp" startPc="268437157">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437256" name="onStop" parent="PulseCoachApp" startPc="268437254">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437259" name="onLayout" parent="PulseCoachTestView" startPc="268437257">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437314" name="initialize" parent="PulseCoachTestView" startPc="268437260">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437565" name="onUpdate" parent="PulseCoachTestView" startPc="268437315">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437904" name="&lt;globals/DataManager/&lt;&gt;checkHeartRate&gt;" parent="DataManager" startPc="268437566">
+            <param id="hr"/>
+            <param id="currentTime"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437997" name="start" parent="DataManager" startPc="268437905">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438010" name="setCallback" parent="DataManager" startPc="268437998">
+            <param id="callback"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268438261" name="&lt;globals/DataManager/&lt;&gt;checkCadence&gt;" parent="DataManager" startPc="268438011">
+            <param id="cadence"/>
+            <param id="currentTime"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438541" name="loadSettings" parent="DataManager" startPc="268438262">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438594" name="stop" parent="DataManager" startPc="268438542">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438834" name="onSensorData" parent="DataManager" startPc="268438595">
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439025" name="initialize" parent="DataManager" startPc="268438835">
+            <param id="audioMgr"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="SensorIterator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439066" name="getHeartRate" parent="SensorIterator" startPc="268439026">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<strings>
+    <string id="AppName">PulseCoach</string>
+    <string id="HeartRateLabel">Heart Rate:</string>
+    <string id="TestMessage">PulseCoach Test</string>
+</strings> 

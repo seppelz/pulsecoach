@@ -1,0 +1,11 @@
+PulseCoach/
+├── manifest.xml
+├── resources/
+│   ├── strings.xml
+│   └── settings.xml
+├── source/
+│   ├── PulseCoachApp.mc
+│   ├── PulseCoachView.mc
+│   ├── DataManager.mc
+│   └── AudioManager.mc
+└── monkey.jungle 

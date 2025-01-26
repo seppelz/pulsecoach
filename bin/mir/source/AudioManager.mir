@@ -1,0 +1,253 @@
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc"; @line = 1; ]
+using Toybox.Attention;
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc"; @line = 3; ]
+class AudioManager{
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc"; @line = 4; @position = 16; ]
+    private
+    var prompts;
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc"; @line = 6; ]
+    function initialize() as Void {
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_6_26_16_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" 7 8 ]
+        %tmp.1 = newd 7;
+        %tmp.2 = "push_harder";
+        %tmp.3 = "Push harder! You've got this!";
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 %tmp.2 %tmp.3;
+        %tmp.6 = "great_pace";
+        %tmp.7 = "Great pace! Keep it up!";
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 %tmp.6 %tmp.7;
+        %tmp.10 = "lengthen_stride";
+        %tmp.11 = "Lengthen your stride!";
+        %tmp.12 = dup %tmp.9;
+        %tmp.13 = aputv %tmp.12 %tmp.10 %tmp.11;
+        %tmp.14 = "slow_down";
+        %tmp.15 = "Slow down! Heart rate too high!";
+        %tmp.16 = dup %tmp.13;
+        %tmp.17 = aputv %tmp.16 %tmp.14 %tmp.15;
+        %tmp.18 = "speed_up";
+        %tmp.19 = "Speed up! You can do it!";
+        %tmp.20 = dup %tmp.17;
+        %tmp.21 = aputv %tmp.20 %tmp.18 %tmp.19;
+        %tmp.22 = "zone_up";
+        %tmp.23 = "Moving up a zone!";
+        %tmp.24 = dup %tmp.21;
+        %tmp.25 = aputv %tmp.24 %tmp.22 %tmp.23;
+        %tmp.26 = "zone_down";
+        %tmp.27 = "Moving down a zone!";
+        %tmp.28 = dup %tmp.25;
+        %tmp.29 = aputv %tmp.28 %tmp.26 %tmp.27;
+        putv self :prompts %tmp.29;
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_6_26_16_4_stop:
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc"; @line = 18; ]
+    function playPrompt(promptKey) {
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_18_35_53_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" 19 8 ]
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_19_8_52_8_if_stmt:
+        %tmp.2 = getv ? :prompts;
+        %tmp.3 = getv function %tmp.2 :hasKey;
+        %tmp.5 = lgetv %promptKey;
+        %tmp.6 = invoke %tmp.2 %tmp.3(%tmp.5);
+        bf %tmp.6 @_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_19_8_52_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_19_8_52_8_if_true:
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_19_39_52_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" 21 12 ]
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_21_12_35_12_if_stmt:
+        %tmp.8 = getm $.Toybox.Attention;
+        %tmp.10 = const :playTone;
+        %tmp.11 = canhazplz %tmp.8 %tmp.10;
+        bf %tmp.11 @_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_21_12_35_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_21_12_35_12_if_true:
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_21_41_35_12_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" 22 16 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_21_41_35_12_start" "_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_21_41_35_12_stop" ]
+        %toneProfile.1 = local;
+        %tmp.12 = newd 7;
+        %tmp.13 = "push_harder";
+        %tmp.14 = getm $.Toybox.Attention;
+        %tmp.15 = getv %tmp.14 :TONE_LOUD_BEEP;
+        %tmp.16 = dup %tmp.12;
+        %tmp.17 = aputv %tmp.16 %tmp.13 %tmp.15;
+        %tmp.18 = "great_pace";
+        %tmp.19 = getm $.Toybox.Attention;
+        %tmp.20 = getv %tmp.19 :TONE_SUCCESS;
+        %tmp.21 = dup %tmp.17;
+        %tmp.22 = aputv %tmp.21 %tmp.18 %tmp.20;
+        %tmp.23 = "lengthen_stride";
+        %tmp.24 = getm $.Toybox.Attention;
+        %tmp.25 = getv %tmp.24 :TONE_ALERT_HI;
+        %tmp.26 = dup %tmp.22;
+        %tmp.27 = aputv %tmp.26 %tmp.23 %tmp.25;
+        %tmp.28 = "slow_down";
+        %tmp.29 = getm $.Toybox.Attention;
+        %tmp.30 = getv %tmp.29 :TONE_ALERT_LO;
+        %tmp.31 = dup %tmp.27;
+        %tmp.32 = aputv %tmp.31 %tmp.28 %tmp.30;
+        %tmp.33 = "speed_up";
+        %tmp.34 = getm $.Toybox.Attention;
+        %tmp.35 = getv %tmp.34 :TONE_INTERVAL_ALERT;
+        %tmp.36 = dup %tmp.32;
+        %tmp.37 = aputv %tmp.36 %tmp.33 %tmp.35;
+        %tmp.38 = "zone_up";
+        %tmp.39 = getm $.Toybox.Attention;
+        %tmp.40 = getv %tmp.39 :TONE_SUCCESS;
+        %tmp.41 = dup %tmp.37;
+        %tmp.42 = aputv %tmp.41 %tmp.38 %tmp.40;
+        %tmp.43 = "zone_down";
+        %tmp.44 = getm $.Toybox.Attention;
+        %tmp.45 = getv %tmp.44 :TONE_ALERT_LO;
+        %tmp.46 = dup %tmp.42;
+        %tmp.47 = aputv %tmp.46 %tmp.43 %tmp.45;
+        lputv %toneProfile.1 %tmp.47;
+[ "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" 32 16 ]
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_32_16_34_16_if_stmt:
+        %tmp.48 = lgetv %toneProfile.1;
+        %tmp.49 = getv function %tmp.48 :hasKey;
+        %tmp.51 = lgetv %promptKey;
+        %tmp.52 = invoke %tmp.48 %tmp.49(%tmp.51);
+        bf %tmp.52 @_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_32_16_34_16_if_end;
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_32_16_34_16_if_true:
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_32_51_34_16_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" 33 20 ]
+        %tmp.53 = getm $.Toybox.Attention;
+        %tmp.54 = getv function %tmp.53 :playTone;
+        %tmp.56 = lgetv %toneProfile.1;
+        %tmp.58 = lgetv %promptKey;
+        %tmp.59 = agetv %tmp.56 %tmp.58;
+        invoke %tmp.53 %tmp.54(%tmp.59);
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_32_51_34_16_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_32_16_34_16_if_end;
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_32_16_34_16_if_end:
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_21_41_35_12_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_21_12_35_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_21_12_35_12_if_end:
+[ "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" 37 12 ]
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_37_12_51_12_if_stmt:
+        %tmp.61 = getm $.Toybox.Attention;
+        %tmp.63 = const :vibrate;
+        %tmp.64 = canhazplz %tmp.61 %tmp.63;
+        bf %tmp.64 @_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_37_12_51_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_37_12_51_12_if_true:
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_37_40_51_12_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" 38 16 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_37_40_51_12_start" "_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_37_40_51_12_stop" ]
+        %vibeProfiles.2 = local;
+        %tmp.65 = newd 7;
+        %tmp.66 = "push_harder";
+        %tmp.67 = newa 1;
+        %tmp.70 = getm $.Toybox.Attention;
+        %tmp.71 = getv function ? %tmp.70 :VibeProfile;
+        %tmp.72 = 50;
+        %tmp.73 = 500;
+        %tmp.68 = newc %tmp.71 (%tmp.72, %tmp.73);
+        %tmp.74 = dup %tmp.67;
+        %tmp.75 = aputv %tmp.74 0 %tmp.68;
+        %tmp.76 = dup %tmp.65;
+        %tmp.77 = aputv %tmp.76 %tmp.66 %tmp.75;
+        %tmp.78 = "great_pace";
+        %tmp.79 = newa 1;
+        %tmp.82 = getm $.Toybox.Attention;
+        %tmp.83 = getv function ? %tmp.82 :VibeProfile;
+        %tmp.84 = 100;
+        %tmp.85 = 100;
+        %tmp.80 = newc %tmp.83 (%tmp.84, %tmp.85);
+        %tmp.86 = dup %tmp.79;
+        %tmp.87 = aputv %tmp.86 0 %tmp.80;
+        %tmp.88 = dup %tmp.77;
+        %tmp.89 = aputv %tmp.88 %tmp.78 %tmp.87;
+        %tmp.90 = "lengthen_stride";
+        %tmp.91 = newa 1;
+        %tmp.94 = getm $.Toybox.Attention;
+        %tmp.95 = getv function ? %tmp.94 :VibeProfile;
+        %tmp.96 = 75;
+        %tmp.97 = 300;
+        %tmp.92 = newc %tmp.95 (%tmp.96, %tmp.97);
+        %tmp.98 = dup %tmp.91;
+        %tmp.99 = aputv %tmp.98 0 %tmp.92;
+        %tmp.100 = dup %tmp.89;
+        %tmp.101 = aputv %tmp.100 %tmp.90 %tmp.99;
+        %tmp.102 = "slow_down";
+        %tmp.103 = newa 1;
+        %tmp.106 = getm $.Toybox.Attention;
+        %tmp.107 = getv function ? %tmp.106 :VibeProfile;
+        %tmp.108 = 100;
+        %tmp.109 = 300;
+        %tmp.104 = newc %tmp.107 (%tmp.108, %tmp.109);
+        %tmp.110 = dup %tmp.103;
+        %tmp.111 = aputv %tmp.110 0 %tmp.104;
+        %tmp.112 = dup %tmp.101;
+        %tmp.113 = aputv %tmp.112 %tmp.102 %tmp.111;
+        %tmp.114 = "speed_up";
+        %tmp.115 = newa 1;
+        %tmp.118 = getm $.Toybox.Attention;
+        %tmp.119 = getv function ? %tmp.118 :VibeProfile;
+        %tmp.120 = 50;
+        %tmp.121 = 100;
+        %tmp.116 = newc %tmp.119 (%tmp.120, %tmp.121);
+        %tmp.122 = dup %tmp.115;
+        %tmp.123 = aputv %tmp.122 0 %tmp.116;
+        %tmp.124 = dup %tmp.113;
+        %tmp.125 = aputv %tmp.124 %tmp.114 %tmp.123;
+        %tmp.126 = "zone_up";
+        %tmp.127 = newa 1;
+        %tmp.130 = getm $.Toybox.Attention;
+        %tmp.131 = getv function ? %tmp.130 :VibeProfile;
+        %tmp.132 = 100;
+        %tmp.133 = 100;
+        %tmp.128 = newc %tmp.131 (%tmp.132, %tmp.133);
+        %tmp.134 = dup %tmp.127;
+        %tmp.135 = aputv %tmp.134 0 %tmp.128;
+        %tmp.136 = dup %tmp.125;
+        %tmp.137 = aputv %tmp.136 %tmp.126 %tmp.135;
+        %tmp.138 = "zone_down";
+        %tmp.139 = newa 1;
+        %tmp.142 = getm $.Toybox.Attention;
+        %tmp.143 = getv function ? %tmp.142 :VibeProfile;
+        %tmp.144 = 75;
+        %tmp.145 = 300;
+        %tmp.140 = newc %tmp.143 (%tmp.144, %tmp.145);
+        %tmp.146 = dup %tmp.139;
+        %tmp.147 = aputv %tmp.146 0 %tmp.140;
+        %tmp.148 = dup %tmp.137;
+        %tmp.149 = aputv %tmp.148 %tmp.138 %tmp.147;
+        lputv %vibeProfiles.2 %tmp.149;
+[ "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" 48 16 ]
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_48_16_50_16_if_stmt:
+        %tmp.150 = lgetv %vibeProfiles.2;
+        %tmp.151 = getv function %tmp.150 :hasKey;
+        %tmp.153 = lgetv %promptKey;
+        %tmp.154 = invoke %tmp.150 %tmp.151(%tmp.153);
+        bf %tmp.154 @_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_48_16_50_16_if_end;
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_48_16_50_16_if_true:
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_48_52_50_16_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc" 49 20 ]
+        %tmp.155 = getm $.Toybox.Attention;
+        %tmp.156 = getv function %tmp.155 :vibrate;
+        %tmp.158 = lgetv %vibeProfiles.2;
+        %tmp.160 = lgetv %promptKey;
+        %tmp.161 = agetv %tmp.158 %tmp.160;
+        invoke %tmp.155 %tmp.156(%tmp.161);
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_48_52_50_16_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_48_16_50_16_if_end;
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_48_16_50_16_if_end:
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_37_40_51_12_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_37_12_51_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_37_12_51_12_if_end:
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_19_39_52_8_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_19_8_52_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_19_8_52_8_if_end:
+_home_sebastian_MEGA_PulseCoach_source_AudioManager_mc_18_35_53_4_stop:
+    }
+}
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/AudioManager.mc"; @line = 1; ]
+<init> {
+}

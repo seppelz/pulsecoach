@@ -1,0 +1,61 @@
+<settings>
+    <setting propertyKey="@Properties.zone1" title="Zone 1 Heart Rate">
+        <settingConfig type="numeric">
+            <listEntry value="120"/>
+            <listEntry value="130"/>
+            <listEntry value="140"/>
+            <listEntry value="150"/>
+            <listEntry value="160"/>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.zone2" title="Zone 2 Heart Rate">
+        <settingConfig type="numeric">
+            <listEntry value="140"/>
+            <listEntry value="150"/>
+            <listEntry value="160"/>
+            <listEntry value="170"/>
+            <listEntry value="180"/>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.zone3" title="Zone 3 Heart Rate">
+        <settingConfig type="numeric">
+            <listEntry value="160"/>
+            <listEntry value="170"/>
+            <listEntry value="180"/>
+            <listEntry value="190"/>
+            <listEntry value="200"/>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.zone4" title="Zone 4 Heart Rate">
+        <settingConfig type="numeric">
+            <listEntry value="180"/>
+            <listEntry value="185"/>
+            <listEntry value="190"/>
+            <listEntry value="195"/>
+            <listEntry value="200"/>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.targetSpeed" title="Target Speed (m/s)">
+        <settingConfig type="numeric">
+            <listEntry value="2.0"/>
+            <listEntry value="2.5"/>
+            <listEntry value="3.0"/>
+            <listEntry value="3.5"/>
+            <listEntry value="4.0"/>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.minStride" title="Minimum Stride Length (m)">
+        <settingConfig type="numeric">
+            <listEntry value="0.5"/>
+            <listEntry value="0.6"/>
+            <listEntry value="0.7"/>
+            <listEntry value="0.8"/>
+            <listEntry value="0.9"/>
+        </settingConfig>
+    </setting>
+</settings> 

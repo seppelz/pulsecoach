@@ -1,0 +1,39 @@
+[ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 12; ]
+    module Strings {
+        [ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 13; @position = 27; initialized = true; ]
+        var HeartRateLabel as ResourceId;
+        [ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 14; @position = 27; initialized = true; ]
+        var TestMessage as ResourceId;
+        [ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 15; @position = 27; initialized = true; ]
+        var AppName as ResourceId;
+    }
+}
+[ @file = "/home/sebastian/MEGA/PulseCoach/bin/gen/006-B3077-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}

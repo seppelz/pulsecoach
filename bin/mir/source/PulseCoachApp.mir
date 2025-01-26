@@ -1,0 +1,60 @@
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc"; @line = 1; ]
+using Toybox.Application;
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc"; @line = 4; ]
+class PulseCoachApp extends Application.AppBase{
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc"; @line = 5; @position = 16; ]
+    private
+    var dataManager;
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc"; @line = 6; @position = 16; ]
+    private
+    var audioManager;
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc"; @line = 8; ]
+    function initialize() as Void {
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachApp_mc_8_26_12_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" 9 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" 10 8 ]
+        %tmp.7 = getv ? :AudioManager;
+        %tmp.4 = newc %tmp.7 ();
+        putv self :audioManager %tmp.4;
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" 11 8 ]
+        %tmp.11 = getv ? :DataManager;
+        %tmp.13 = getv ? :audioManager;
+        %tmp.8 = newc %tmp.11 (%tmp.13);
+        putv self :dataManager %tmp.8;
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachApp_mc_8_26_12_4_stop:
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc"; @line = 15; ]
+    function onStart(state) {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc"; @line = 19; ]
+    function onStop(state) {
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc"; @line = 23; ]
+    function getInitialView() {
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachApp_mc_23_30_25_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc" 24 8 ]
+        %tmp.1 = newa 1;
+        %tmp.5 = getv ? :PulseCoachView;
+        %tmp.7 = getv ? :dataManager;
+        %tmp.2 = newc %tmp.5 (%tmp.7);
+        %tmp.8 = dup %tmp.1;
+        %tmp.9 = aputv %tmp.8 0 %tmp.2;
+        ret %tmp.9;
+_home_sebastian_MEGA_PulseCoach_source_PulseCoachApp_mc_23_30_25_4_stop:
+    }
+}
+[ @file = "/home/sebastian/MEGA/PulseCoach/source/PulseCoachApp.mc"; @line = 1; ]
+<init> {
+}

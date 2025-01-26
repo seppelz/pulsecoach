@@ -1,0 +1,5 @@
+{
+    "developerKey": "../developer-key/developer_key.der",
+    "sdkPath": ".",
+    "devices": ["fr245m", "fr245"]
+} 
