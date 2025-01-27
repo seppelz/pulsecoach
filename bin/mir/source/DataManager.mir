@@ -256,9 +256,9 @@ _home_sebastian_MEGA_PulseCoach_source_DataManager_mc_61_35_63_4_stop:
     }
     [ @file = "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc"; @line = 65; ]
     function start() {
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_65_21_74_4_start:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_65_21_79_4_start:
 [ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 67 8 ]
-        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_65_21_74_4_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_65_21_74_4_stop" ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_65_21_79_4_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_65_21_79_4_stop" ]
         %options.1 = local;
         %tmp.1 = newd 4;
         %tmp.3 = const :period;
@@ -278,7 +278,7 @@ _home_sebastian_MEGA_PulseCoach_source_DataManager_mc_65_21_74_4_start:
         %tmp.20 = dup %tmp.16;
         %tmp.21 = aputv %tmp.20 %tmp.18 %tmp.19;
         lputv %options.1 %tmp.21;
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 73 8 ]
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 74 8 ]
         %tmp.22 = getm $.Toybox.Sensor;
         %tmp.23 = getv function %tmp.22 :registerSensorDataListener;
         %tmp.24 = self;
@@ -287,48 +287,63 @@ _home_sebastian_MEGA_PulseCoach_source_DataManager_mc_65_21_74_4_start:
         %tmp.28 = invoke %tmp.24 %tmp.25(%tmp.27);
         %tmp.30 = lgetv %options.1;
         invoke %tmp.22 %tmp.23(%tmp.28, %tmp.30);
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_65_21_74_4_stop:
-    }
-    [ @file = "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc"; @line = 76; ]
-    function stop() {
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_76_20_81_4_start:
 [ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 77 8 ]
+        %tmp.33 = getm $.Toybox.Timer;
+        %tmp.34 = getv function ? %tmp.33 :Timer;
+        %tmp.31 = newc %tmp.34 ();
+        putv self :timer %tmp.31;
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 78 8 ]
+        %tmp.36 = getv ? :timer;
+        %tmp.37 = getv function %tmp.36 :start;
+        %tmp.38 = self;
+        %tmp.39 = getv function %tmp.38 :method;
+        %tmp.41 = const :onTimer;
+        %tmp.42 = invoke %tmp.38 %tmp.39(%tmp.41);
+        %tmp.43 = 1000;
+        %tmp.44 = true;
+        invoke %tmp.36 %tmp.37(%tmp.42, %tmp.43, %tmp.44);
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_65_21_79_4_stop:
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc"; @line = 81; ]
+    function stop() {
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_81_20_86_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 82 8 ]
         %tmp.1 = getm $.Toybox.Sensor;
         %tmp.2 = getv function %tmp.1 :unregisterSensorDataListener;
         invoke %tmp.1 %tmp.2();
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 78 8 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_78_8_80_8_if_stmt:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 83 8 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_8_85_8_if_stmt:
         %tmp.4 = getv ? :timer;
         %tmp.5 = null;
         %tmp.6 = ne %tmp.4 %tmp.5;
-        bf %tmp.6 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_78_8_80_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_78_8_80_8_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_78_27_80_8_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 79 12 ]
+        bf %tmp.6 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_8_85_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_8_85_8_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_27_85_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 84 12 ]
         %tmp.8 = getv ? :timer;
         %tmp.9 = as %tmp.8 { (!Null) };
         %tmp.10 = getv function %tmp.9 :stop;
         invoke %tmp.9 %tmp.10();
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_78_27_80_8_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_78_8_80_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_78_8_80_8_if_end:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_76_20_81_4_stop:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_27_85_8_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_8_85_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_8_85_8_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_81_20_86_4_stop:
     }
-    [ @file = "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc"; @line = 83; ]
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc"; @line = 88; ]
     function onSensorData(data as Sensor.SensorData) as Void {
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_61_105_4_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 84 8 ]
-        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_61_105_4_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_61_105_4_stop" ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_61_110_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 89 8 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_61_110_4_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_61_110_4_stop" ]
         %hr.1 = local;
         %tmp.1 = "--";
         lputv %hr.1 %tmp.1;
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 85 8 ]
-        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_61_105_4_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_61_105_4_stop" ]
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 90 8 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_61_110_4_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_61_110_4_stop" ]
         %cadence.2 = local;
         %tmp.2 = "--";
         lputv %cadence.2 %tmp.2;
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 86 8 ]
-        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_61_105_4_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_61_105_4_stop" ]
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 91 8 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_61_110_4_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_61_110_4_stop" ]
         %currentTime.3 = local;
         %tmp.3 = getm $.Toybox.System;
         %tmp.4 = getv function %tmp.3 :getTimer;
@@ -336,107 +351,107 @@ _home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_61_105_4_start:
         %tmp.6 = 1000;
         %tmp.7 = div %tmp.5 %tmp.6;
         lputv %currentTime.3 %tmp.7;
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 88 8 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_8_93_8_if_stmt:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_12_88_53_begin:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 93 8 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_8_98_8_if_stmt:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_12_93_53_begin:
         %tmp.9 = lgetv %data;
         %tmp.11 = const :heartRate;
         %tmp.12 = canhazplz %tmp.9 %tmp.11;
-        bf %tmp.12 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_8_93_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_35_88_53_true:
+        bf %tmp.12 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_8_98_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_35_93_53_true:
         %tmp.13 = lgetv %data;
         %tmp.14 = as %tmp.13 { (interface { var heartRate; }) };
         %tmp.15 = getv %tmp.14 :heartRate;
         %tmp.16 = null;
         %tmp.17 = ne %tmp.15 %tmp.16;
         push %tmp.17;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_35_88_53_end:
-        %tmp.18 = phi [%tmp.12 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_12_88_53_begin] [%tmp.17 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_35_88_53_true] [%tmp.18 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_35_88_53_end];
-        bf %tmp.18 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_8_93_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_8_93_8_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_59_93_8_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 89 12 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_35_93_53_end:
+        %tmp.18 = phi [%tmp.12 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_12_93_53_begin] [%tmp.17 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_35_93_53_true] [%tmp.18 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_35_93_53_end];
+        bf %tmp.18 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_8_98_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_8_98_8_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_59_98_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 94 12 ]
         %tmp.19 = lgetv %data;
         %tmp.20 = as %tmp.19 { (interface { var heartRate; }) };
         %tmp.21 = getv %tmp.20 :heartRate;
         lputv %hr.1 %tmp.21;
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 90 12 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_90_12_92_12_if_stmt:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 95 12 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_95_12_97_12_if_stmt:
         %tmp.23 = lgetv %currentTime.3;
         %tmp.25 = getv ? :lastHRFeedbackTime;
         %tmp.26 = sub %tmp.23 %tmp.25;
         %tmp.28 = getv ? :HR_FEEDBACK_COOLDOWN;
         %tmp.29 = gte %tmp.26 %tmp.28;
-        bf %tmp.29 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_90_12_92_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_90_12_92_12_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_90_74_92_12_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 91 16 ]
+        bf %tmp.29 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_95_12_97_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_95_12_97_12_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_95_74_97_12_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 96 16 ]
         %tmp.30 = self;
         %tmp.31 = getv function %tmp.30 :checkHeartRate;
         %tmp.33 = lgetv %hr.1;
         %tmp.35 = lgetv %currentTime.3;
         invoke %tmp.30 %tmp.31(%tmp.33, %tmp.35);
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_90_74_92_12_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_90_12_92_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_90_12_92_12_if_end:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_59_93_8_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_8_93_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_8_93_8_if_end:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 94 8 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_8_99_8_if_stmt:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_12_94_49_begin:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_95_74_97_12_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_95_12_97_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_95_12_97_12_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_59_98_8_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_8_98_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_93_8_98_8_if_end:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 99 8 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_8_104_8_if_stmt:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_12_99_49_begin:
         %tmp.37 = lgetv %data;
         %tmp.39 = const :cadence;
         %tmp.40 = canhazplz %tmp.37 %tmp.39;
-        bf %tmp.40 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_8_99_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_33_94_49_true:
+        bf %tmp.40 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_8_104_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_33_99_49_true:
         %tmp.41 = lgetv %data;
         %tmp.42 = as %tmp.41 { (interface { var cadence; }) };
         %tmp.43 = getv %tmp.42 :cadence;
         %tmp.44 = null;
         %tmp.45 = ne %tmp.43 %tmp.44;
         push %tmp.45;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_33_94_49_end:
-        %tmp.46 = phi [%tmp.40 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_12_94_49_begin] [%tmp.45 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_33_94_49_true] [%tmp.46 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_33_94_49_end];
-        bf %tmp.46 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_8_99_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_8_99_8_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_55_99_8_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 95 12 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_33_99_49_end:
+        %tmp.46 = phi [%tmp.40 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_12_99_49_begin] [%tmp.45 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_33_99_49_true] [%tmp.46 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_33_99_49_end];
+        bf %tmp.46 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_8_104_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_8_104_8_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_55_104_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 100 12 ]
         %tmp.47 = lgetv %data;
         %tmp.48 = as %tmp.47 { (interface { var cadence; }) };
         %tmp.49 = getv %tmp.48 :cadence;
         lputv %cadence.2 %tmp.49;
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 96 12 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_96_12_98_12_if_stmt:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 101 12 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_101_12_103_12_if_stmt:
         %tmp.51 = lgetv %currentTime.3;
         %tmp.53 = getv ? :lastCadenceFeedbackTime;
         %tmp.54 = sub %tmp.51 %tmp.53;
         %tmp.56 = getv ? :CADENCE_FEEDBACK_COOLDOWN;
         %tmp.57 = gte %tmp.54 %tmp.56;
-        bf %tmp.57 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_96_12_98_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_96_12_98_12_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_96_84_98_12_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 97 16 ]
+        bf %tmp.57 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_101_12_103_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_101_12_103_12_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_101_84_103_12_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 102 16 ]
         %tmp.58 = self;
         %tmp.59 = getv function %tmp.58 :checkCadence;
         %tmp.61 = lgetv %cadence.2;
         %tmp.63 = lgetv %currentTime.3;
         invoke %tmp.58 %tmp.59(%tmp.61, %tmp.63);
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_96_84_98_12_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_96_12_98_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_96_12_98_12_if_end:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_55_99_8_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_8_99_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_94_8_99_8_if_end:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 102 8 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_102_8_104_8_if_stmt:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_101_84_103_12_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_101_12_103_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_101_12_103_12_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_55_104_8_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_8_104_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_99_8_104_8_if_end:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 107 8 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_107_8_109_8_if_stmt:
         %tmp.65 = getv ? :uiCallback;
         %tmp.66 = null;
         %tmp.67 = ne %tmp.65 %tmp.66;
-        bf %tmp.67 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_102_8_104_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_102_8_104_8_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_102_32_104_8_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 103 12 ]
+        bf %tmp.67 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_107_8_109_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_107_8_109_8_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_107_32_109_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 108 12 ]
         %tmp.69 = getv ? :uiCallback;
         %tmp.70 = as %tmp.69 { (!Null) };
         %tmp.71 = getv function %tmp.70 :invoke;
@@ -444,233 +459,431 @@ _home_sebastian_MEGA_PulseCoach_source_DataManager_mc_102_32_104_8_start:
         %tmp.75 = getv ? :currentZone;
         %tmp.77 = lgetv %cadence.2;
         invoke %tmp.70 %tmp.71(%tmp.73, %tmp.75, %tmp.77);
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_102_32_104_8_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_102_8_104_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_102_8_104_8_if_end:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_83_61_105_4_stop:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_107_32_109_8_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_107_8_109_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_107_8_109_8_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_88_61_110_4_stop:
     }
-    [ @file = "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc"; @line = 107; ]
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc"; @line = 112; ]
+    function onTimer() as Void {
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_112_31_124_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 113 8 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_113_8_123_8_if_stmt:
+        %tmp.2 = getv ? :Activity;
+        %tmp.4 = const :getActivityInfo;
+        %tmp.5 = canhazplz %tmp.2 %tmp.4;
+        bf %tmp.5 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_113_8_123_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_113_8_123_8_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_113_43_123_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 114 12 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_113_43_123_8_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_113_43_123_8_stop" ]
+        %info.1 = local;
+        %tmp.7 = getv ? :Activity;
+        %tmp.8 = as %tmp.7 { (interface { var getActivityInfo; }) };
+        %tmp.9 = getv function %tmp.8 :getActivityInfo;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        lputv %info.1 %tmp.10;
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 115 12 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_115_12_122_12_if_stmt:
+        %tmp.12 = lgetv %info.1;
+        %tmp.13 = null;
+        %tmp.14 = ne %tmp.12 %tmp.13;
+        bf %tmp.14 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_115_12_122_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_115_12_122_12_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_115_30_122_12_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 116 16 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_115_30_122_12_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_115_30_122_12_stop" ]
+        %hr.2 = local;
+        %tmp.15 = lgetv %info.1;
+        %tmp.16 = as %tmp.15 { (!Null) };
+        %tmp.17 = getv %tmp.16 :currentHeartRate;
+        lputv %hr.2 %tmp.17;
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 117 16 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_115_30_122_12_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_115_30_122_12_stop" ]
+        %cad.3 = local;
+        %tmp.18 = lgetv %info.1;
+        %tmp.19 = as %tmp.18 { (!Null) };
+        %tmp.20 = getv %tmp.19 :currentCadence;
+        lputv %cad.3 %tmp.20;
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 119 16 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_16_121_16_if_stmt:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_20_119_41_begin:
+        %tmp.22 = lgetv %hr.2;
+        %tmp.23 = null;
+        %tmp.24 = ne %tmp.22 %tmp.23;
+        bt %tmp.24 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_16_121_16_if_true;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_34_119_41_false:
+        %tmp.26 = lgetv %cad.3;
+        %tmp.27 = null;
+        %tmp.28 = ne %tmp.26 %tmp.27;
+        push %tmp.28;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_34_119_41_end:
+        %tmp.29 = phi [%tmp.24 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_20_119_41_begin] [%tmp.28 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_34_119_41_false] [%tmp.29 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_34_119_41_end];
+        bf %tmp.29 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_16_121_16_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_16_121_16_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_47_121_16_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 120 20 ]
+        %tmp.30 = self;
+        %tmp.31 = getv function %tmp.30 :processActivityData;
+        %tmp.33 = lgetv %hr.2;
+        %tmp.35 = lgetv %cad.3;
+        invoke %tmp.30 %tmp.31(%tmp.33, %tmp.35);
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_47_121_16_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_16_121_16_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_119_16_121_16_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_115_30_122_12_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_115_12_122_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_115_12_122_12_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_113_43_123_8_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_113_8_123_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_113_8_123_8_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_112_31_124_4_stop:
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc"; @line = 126; ]
+    function processActivityData(hr, cadence) {
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_126_46_145_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 127 8 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_126_46_145_4_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_126_46_145_4_stop" ]
+        %currentTime.1 = local;
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getTimer;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 1000;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        lputv %currentTime.1 %tmp.5;
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 129 8 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_8_133_8_if_stmt:
+        %tmp.7 = lgetv %hr;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        bf %tmp.9 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_8_133_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_8_133_8_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_24_133_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 130 12 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_130_12_132_12_if_stmt:
+        %tmp.11 = lgetv %currentTime.1;
+        %tmp.13 = getv ? :lastHRFeedbackTime;
+        %tmp.14 = sub %tmp.11 %tmp.13;
+        %tmp.16 = getv ? :HR_FEEDBACK_COOLDOWN;
+        %tmp.17 = gte %tmp.14 %tmp.16;
+        bf %tmp.17 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_130_12_132_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_130_12_132_12_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_130_74_132_12_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 131 16 ]
+        %tmp.18 = self;
+        %tmp.19 = getv function %tmp.18 :checkHeartRate;
+        %tmp.21 = lgetv %hr;
+        %tmp.22 = as %tmp.21 { (!Null) };
+        %tmp.24 = lgetv %currentTime.1;
+        invoke %tmp.18 %tmp.19(%tmp.22, %tmp.24);
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_130_74_132_12_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_130_12_132_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_130_12_132_12_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_24_133_8_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_8_133_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_8_133_8_if_end:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 135 8 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_135_8_139_8_if_stmt:
+        %tmp.26 = lgetv %cadence;
+        %tmp.27 = null;
+        %tmp.28 = ne %tmp.26 %tmp.27;
+        bf %tmp.28 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_135_8_139_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_135_8_139_8_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_135_29_139_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 136 12 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_136_12_138_12_if_stmt:
+        %tmp.30 = lgetv %currentTime.1;
+        %tmp.32 = getv ? :lastCadenceFeedbackTime;
+        %tmp.33 = sub %tmp.30 %tmp.32;
+        %tmp.35 = getv ? :CADENCE_FEEDBACK_COOLDOWN;
+        %tmp.36 = gte %tmp.33 %tmp.35;
+        bf %tmp.36 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_136_12_138_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_136_12_138_12_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_136_84_138_12_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 137 16 ]
+        %tmp.37 = self;
+        %tmp.38 = getv function %tmp.37 :checkCadence;
+        %tmp.40 = lgetv %cadence;
+        %tmp.41 = as %tmp.40 { (!Null) };
+        %tmp.43 = lgetv %currentTime.1;
+        invoke %tmp.37 %tmp.38(%tmp.41, %tmp.43);
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_136_84_138_12_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_136_12_138_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_136_12_138_12_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_135_29_139_8_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_135_8_139_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_135_8_139_8_if_end:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 142 8 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_8_144_8_if_stmt:
+        %tmp.45 = getv ? :uiCallback;
+        %tmp.46 = null;
+        %tmp.47 = ne %tmp.45 %tmp.46;
+        bf %tmp.47 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_8_144_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_8_144_8_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_32_144_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 143 12 ]
+        %tmp.49 = getv ? :uiCallback;
+        %tmp.50 = as %tmp.49 { (!Null) };
+        %tmp.51 = getv function %tmp.50 :invoke;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_30_143_48_begin:
+        %tmp.53 = lgetv %hr;
+        %tmp.54 = null;
+        %tmp.55 = ne %tmp.53 %tmp.54;
+        bf %tmp.55 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_30_143_48_false;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_30_143_48_true:
+        %tmp.57 = lgetv %hr;
+        %tmp.58 = as %tmp.57 { (!Null) };
+        push %tmp.58;
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_30_143_48_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_30_143_48_false:
+        %tmp.59 = "--";
+        push %tmp.59;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_30_143_48_end:
+        %tmp.60 = phi [%tmp.55 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_30_143_48_begin] [%tmp.58 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_30_143_48_true] [%tmp.59 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_30_143_48_false] [%tmp.60 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_30_143_48_end];
+        %tmp.62 = getv ? :currentZone;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_67_143_95_begin:
+        %tmp.64 = lgetv %cadence;
+        %tmp.65 = null;
+        %tmp.66 = ne %tmp.64 %tmp.65;
+        bf %tmp.66 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_67_143_95_false;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_67_143_95_true:
+        %tmp.68 = lgetv %cadence;
+        %tmp.69 = as %tmp.68 { (!Null) };
+        push %tmp.69;
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_67_143_95_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_67_143_95_false:
+        %tmp.70 = "--";
+        push %tmp.70;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_67_143_95_end:
+        %tmp.71 = phi [%tmp.66 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_67_143_95_begin] [%tmp.69 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_67_143_95_true] [%tmp.70 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_67_143_95_false] [%tmp.71 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_143_67_143_95_end];
+        invoke %tmp.50 %tmp.51(%tmp.60, %tmp.62, %tmp.71);
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_32_144_8_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_8_144_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_8_144_8_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_126_46_145_4_stop:
+    }
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc"; @line = 147; ]
     private
     function checkHeartRate(hr, currentTime) {
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_107_53_137_4_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 109 8 ]
-        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_107_53_137_4_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_107_53_137_4_stop" ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_147_53_177_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 149 8 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_147_53_177_4_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_147_53_177_4_stop" ]
         %oldZone.1 = local;
         %tmp.2 = getv ? :currentZone;
         lputv %oldZone.1 %tmp.2;
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 110 8 ]
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 150 8 ]
         %tmp.3 = 0;
         putv self :currentZone %tmp.3;
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 111 8 ]
-        for @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_test @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_incr @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_init:
-        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_begin" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_end" ]
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 151 8 ]
+        for @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_test @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_incr @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_init:
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_begin" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_end" ]
         %i.2 = local;
         %tmp.4 = 0;
         lputv %i.2 %tmp.4;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_test:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_test:
         %tmp.6 = lgetv %i.2;
         %tmp.8 = getv ? :hrZones;
         %tmp.9 = getv function %tmp.8 :size;
         %tmp.10 = invoke %tmp.8 %tmp.9();
         %tmp.11 = lt %tmp.6 %tmp.10;
-        bf %tmp.11 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_begin:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_49_117_8_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 112 12 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_112_12_115_12_if_stmt:
+        bf %tmp.11 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_begin:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_49_157_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 152 12 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_12_155_12_if_stmt:
         %tmp.13 = lgetv %hr;
         %tmp.15 = getv ? :hrZones;
         %tmp.17 = lgetv %i.2;
         %tmp.18 = agetv %tmp.15 %tmp.17;
         %tmp.19 = lt %tmp.13 %tmp.18;
-        bf %tmp.19 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_112_12_115_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_112_12_115_12_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_112_33_115_12_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 113 16 ]
+        bf %tmp.19 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_12_155_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_12_155_12_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_33_155_12_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 153 16 ]
         %tmp.21 = lgetv %i.2;
         putv self :currentZone %tmp.21;
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 114 16 ]
-        goto break @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_112_33_115_12_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_112_12_115_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_112_12_115_12_if_end:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 116 12 ]
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 154 16 ]
+        goto break @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_33_155_12_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_12_155_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_12_155_12_if_end:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 156 12 ]
         %tmp.23 = lgetv %i.2;
         %tmp.24 = 1;
         %tmp.25 = add %tmp.23 %tmp.24;
         putv self :currentZone %tmp.25;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_49_117_8_stop:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_incr:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 111 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_49_157_8_stop:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_incr:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 151 ]
         %tmp.28 = lgetv %i.2;
         %tmp.29 = add %tmp.28 1;
         lputv %i.2 %tmp.29;
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_test;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_111_8_117_8_for_end:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 120 8 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_120_8_136_8_if_stmt:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_test;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_151_8_157_8_for_end:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 160 8 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_160_8_176_8_if_stmt:
         %tmp.31 = lgetv %currentTime;
         %tmp.33 = getv ? :lastHRFeedbackTime;
         %tmp.34 = sub %tmp.31 %tmp.33;
         %tmp.36 = getv ? :HR_FEEDBACK_COOLDOWN;
         %tmp.37 = gte %tmp.34 %tmp.36;
-        bf %tmp.37 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_120_8_136_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_120_8_136_8_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_120_70_136_8_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 121 12 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_121_12_135_12_if_stmt:
+        bf %tmp.37 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_160_8_176_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_160_8_176_8_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_160_70_176_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 161 12 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_161_12_175_12_if_stmt:
         %tmp.39 = getv ? :currentZone;
         %tmp.40 = 0;
         %tmp.41 = eq %tmp.39 %tmp.40;
-        bf %tmp.41 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_121_12_135_12_if_false;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_121_12_135_12_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_121_34_124_12_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 122 16 ]
+        bf %tmp.41 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_161_12_175_12_if_false;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_161_12_175_12_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_161_34_164_12_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 162 16 ]
         %tmp.43 = getv ? :audioManager;
         %tmp.44 = getv function %tmp.43 :playPrompt;
         %tmp.45 = "push_harder";
         invoke %tmp.43 %tmp.44(%tmp.45);
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 123 16 ]
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 163 16 ]
         %tmp.47 = lgetv %currentTime;
         putv self :lastHRFeedbackTime %tmp.47;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_121_34_124_12_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_121_12_135_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_121_12_135_12_if_false:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 124 19 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_124_19_135_12_if_stmt:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_161_34_164_12_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_161_12_175_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_161_12_175_12_if_false:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 164 19 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_164_19_175_12_if_stmt:
         %tmp.49 = getv ? :currentZone;
         %tmp.50 = 4;
         %tmp.51 = gte %tmp.49 %tmp.50;
-        bf %tmp.51 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_124_19_135_12_if_false;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_124_19_135_12_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_124_41_127_12_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 125 16 ]
+        bf %tmp.51 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_164_19_175_12_if_false;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_164_19_175_12_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_164_41_167_12_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 165 16 ]
         %tmp.53 = getv ? :audioManager;
         %tmp.54 = getv function %tmp.53 :playPrompt;
         %tmp.55 = "slow_down";
         invoke %tmp.53 %tmp.54(%tmp.55);
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 126 16 ]
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 166 16 ]
         %tmp.57 = lgetv %currentTime;
         putv self :lastHRFeedbackTime %tmp.57;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_124_41_127_12_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_124_19_135_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_124_19_135_12_if_false:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 127 19 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_127_19_135_12_if_stmt:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_164_41_167_12_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_164_19_175_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_164_19_175_12_if_false:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 167 19 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_167_19_175_12_if_stmt:
         %tmp.59 = lgetv %oldZone.1;
         %tmp.61 = getv ? :currentZone;
         %tmp.62 = ne %tmp.59 %tmp.61;
-        bf %tmp.62 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_127_19_135_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_127_19_135_12_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_127_47_135_12_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 129 16 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_16_133_16_if_stmt:
+        bf %tmp.62 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_167_19_175_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_167_19_175_12_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_167_47_175_12_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 169 16 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_169_16_173_16_if_stmt:
         %tmp.64 = getv ? :currentZone;
         %tmp.66 = lgetv %oldZone.1;
         %tmp.67 = gt %tmp.64 %tmp.66;
-        bf %tmp.67 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_16_133_16_if_false;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_16_133_16_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_43_131_16_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 130 20 ]
+        bf %tmp.67 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_169_16_173_16_if_false;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_169_16_173_16_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_169_43_171_16_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 170 20 ]
         %tmp.69 = getv ? :audioManager;
         %tmp.70 = getv function %tmp.69 :playPrompt;
         %tmp.71 = "zone_up";
         invoke %tmp.69 %tmp.70(%tmp.71);
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_43_131_16_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_16_133_16_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_16_133_16_if_false:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_131_23_133_16_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 132 20 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_169_43_171_16_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_169_16_173_16_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_169_16_173_16_if_false:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_171_23_173_16_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 172 20 ]
         %tmp.73 = getv ? :audioManager;
         %tmp.74 = getv function %tmp.73 :playPrompt;
         %tmp.75 = "zone_down";
         invoke %tmp.73 %tmp.74(%tmp.75);
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_131_23_133_16_stop:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_129_16_133_16_if_end:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 134 16 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_171_23_173_16_stop:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_169_16_173_16_if_end:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 174 16 ]
         %tmp.77 = lgetv %currentTime;
         putv self :lastHRFeedbackTime %tmp.77;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_127_47_135_12_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_127_19_135_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_127_19_135_12_if_end:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_124_19_135_12_if_end:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_121_12_135_12_if_end:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_120_70_136_8_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_120_8_136_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_120_8_136_8_if_end:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_107_53_137_4_stop:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_167_47_175_12_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_167_19_175_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_167_19_175_12_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_164_19_175_12_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_161_12_175_12_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_160_70_176_8_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_160_8_176_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_160_8_176_8_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_147_53_177_4_stop:
     }
-    [ @file = "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc"; @line = 139; ]
+    [ @file = "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc"; @line = 179; ]
     private
     function checkCadence(cadence, currentTime) {
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_139_56_163_4_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 141 8 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_141_8_162_8_if_stmt:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_179_56_203_4_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 181 8 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_181_8_202_8_if_stmt:
         %tmp.2 = lgetv %currentTime;
         %tmp.4 = getv ? :lastCadenceFeedbackTime;
         %tmp.5 = sub %tmp.2 %tmp.4;
         %tmp.7 = getv ? :CADENCE_FEEDBACK_COOLDOWN;
         %tmp.8 = gte %tmp.5 %tmp.7;
-        bf %tmp.8 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_141_8_162_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_141_8_162_8_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_141_80_162_8_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 142 12 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_12_161_12_if_stmt:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_16_142_45_begin:
+        bf %tmp.8 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_181_8_202_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_181_8_202_8_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_181_80_202_8_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 182 12 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_12_201_12_if_stmt:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_16_182_45_begin:
         %tmp.10 = lgetv %cadence;
         %tmp.11 = null;
         %tmp.12 = ne %tmp.10 %tmp.11;
-        bf %tmp.12 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_12_161_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_35_142_45_true:
+        bf %tmp.12 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_12_201_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_35_182_45_true:
         %tmp.14 = lgetv %cadence;
         %tmp.15 = as %tmp.14 { (!Null) };
         %tmp.16 = 0;
         %tmp.17 = gt %tmp.15 %tmp.16;
         push %tmp.17;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_35_142_45_end:
-        %tmp.18 = phi [%tmp.12 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_16_142_45_begin] [%tmp.17 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_35_142_45_true] [%tmp.18 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_35_142_45_end];
-        bf %tmp.18 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_12_161_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_12_161_12_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_48_161_12_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 143 16 ]
-        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_48_161_12_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_48_161_12_stop" ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_35_182_45_end:
+        %tmp.18 = phi [%tmp.12 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_16_182_45_begin] [%tmp.17 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_35_182_45_true] [%tmp.18 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_35_182_45_end];
+        bf %tmp.18 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_12_201_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_12_201_12_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_48_201_12_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 183 16 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_48_201_12_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_48_201_12_stop" ]
         %strideLength.1 = local;
         %tmp.20 = getv ? :targetSpeed;
         %tmp.22 = lgetv %cadence;
         %tmp.23 = as %tmp.22 { (!Null) };
         %tmp.24 = div %tmp.20 %tmp.23;
         lputv %strideLength.1 %tmp.24;
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 144 16 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_144_16_160_16_if_stmt:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 184 16 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_184_16_200_16_if_stmt:
         %tmp.26 = lgetv %strideLength.1;
         %tmp.28 = getv ? :minStrideLength;
         %tmp.29 = lt %tmp.26 %tmp.28;
-        bf %tmp.29 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_144_16_160_16_if_false;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_144_16_160_16_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_144_52_147_16_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 145 20 ]
+        bf %tmp.29 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_184_16_200_16_if_false;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_184_16_200_16_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_184_52_187_16_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 185 20 ]
         %tmp.31 = getv ? :audioManager;
         %tmp.32 = getv function %tmp.31 :playPrompt;
         %tmp.33 = "lengthen_stride";
         invoke %tmp.31 %tmp.32(%tmp.33);
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 146 20 ]
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 186 20 ]
         %tmp.35 = lgetv %currentTime;
         putv self :lastCadenceFeedbackTime %tmp.35;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_144_52_147_16_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_144_16_160_16_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_144_16_160_16_if_false:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_147_23_160_16_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 149 20 ]
-        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_147_23_160_16_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_147_23_160_16_stop" ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_184_52_187_16_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_184_16_200_16_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_184_16_200_16_if_false:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_187_23_200_16_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 189 20 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_187_23_200_16_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_187_23_200_16_stop" ]
         %currentSpeed.2 = local;
         %tmp.37 = lgetv %strideLength.1;
         %tmp.39 = lgetv %cadence;
         %tmp.40 = as %tmp.39 { (!Null) };
         %tmp.41 = mul %tmp.37 %tmp.40;
         lputv %currentSpeed.2 %tmp.41;
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 150 20 ]
-        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_147_23_160_16_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_147_23_160_16_stop" ]
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 190 20 ]
+        [ "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_187_23_200_16_start" "_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_187_23_200_16_stop" ]
         %speedDiff.3 = local;
         %tmp.43 = lgetv %currentSpeed.2;
         %tmp.45 = getv ? :targetSpeed;
@@ -678,59 +891,59 @@ _home_sebastian_MEGA_PulseCoach_source_DataManager_mc_147_23_160_16_start:
         %tmp.47 = getv function %tmp.46 :abs;
         %tmp.48 = invoke %tmp.46 %tmp.47();
         lputv %speedDiff.3 %tmp.48;
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 152 20 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_20_158_20_if_stmt:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 192 20 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_192_20_198_20_if_stmt:
         %tmp.50 = lgetv %speedDiff.3;
         %tmp.51 = 0.2;
         %tmp.52 = lte %tmp.50 %tmp.51;
-        bf %tmp.52 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_20_158_20_if_false;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_20_158_20_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_42_154_20_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 153 24 ]
+        bf %tmp.52 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_192_20_198_20_if_false;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_192_20_198_20_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_192_42_194_20_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 193 24 ]
         %tmp.54 = getv ? :audioManager;
         %tmp.55 = getv function %tmp.54 :playPrompt;
         %tmp.56 = "great_pace";
         invoke %tmp.54 %tmp.55(%tmp.56);
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_42_154_20_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_20_158_20_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_20_158_20_if_false:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 154 27 ]
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_154_27_158_20_if_stmt:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_192_42_194_20_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_192_20_198_20_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_192_20_198_20_if_false:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 194 27 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_194_27_198_20_if_stmt:
         %tmp.58 = lgetv %currentSpeed.2;
         %tmp.60 = getv ? :targetSpeed;
         %tmp.61 = lt %tmp.58 %tmp.60;
-        bf %tmp.61 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_154_27_158_20_if_false;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_154_27_158_20_if_true:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_154_59_156_20_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 155 24 ]
+        bf %tmp.61 @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_194_27_198_20_if_false;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_194_27_198_20_if_true:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_194_59_196_20_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 195 24 ]
         %tmp.63 = getv ? :audioManager;
         %tmp.64 = getv function %tmp.63 :playPrompt;
         %tmp.65 = "speed_up";
         invoke %tmp.63 %tmp.64(%tmp.65);
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_154_59_156_20_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_154_27_158_20_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_154_27_158_20_if_false:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_156_27_158_20_start:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 157 24 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_194_59_196_20_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_194_27_198_20_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_194_27_198_20_if_false:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_196_27_198_20_start:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 197 24 ]
         %tmp.67 = getv ? :audioManager;
         %tmp.68 = getv function %tmp.67 :playPrompt;
         %tmp.69 = "slow_down";
         invoke %tmp.67 %tmp.68(%tmp.69);
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_156_27_158_20_stop:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_154_27_158_20_if_end:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_152_20_158_20_if_end:
-[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 159 20 ]
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_196_27_198_20_stop:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_194_27_198_20_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_192_20_198_20_if_end:
+[ "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc" 199 20 ]
         %tmp.71 = lgetv %currentTime;
         putv self :lastCadenceFeedbackTime %tmp.71;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_147_23_160_16_stop:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_144_16_160_16_if_end:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_48_161_12_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_12_161_12_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_142_12_161_12_if_end:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_141_80_162_8_stop:
-        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_141_8_162_8_if_end;
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_141_8_162_8_if_end:
-_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_139_56_163_4_stop:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_187_23_200_16_stop:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_184_16_200_16_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_48_201_12_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_12_201_12_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_182_12_201_12_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_181_80_202_8_stop:
+        goto @_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_181_8_202_8_if_end;
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_181_8_202_8_if_end:
+_home_sebastian_MEGA_PulseCoach_source_DataManager_mc_179_56_203_4_stop:
     }
 }
 [ @file = "/home/sebastian/MEGA/PulseCoach/source/DataManager.mc"; @line = 1; ]

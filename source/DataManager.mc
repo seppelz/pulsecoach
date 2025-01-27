@@ -70,7 +70,12 @@ class DataManager {
             :enableAccelerometer => true,
             :enableHeartRate => true
         };
+
         Sensor.registerSensorDataListener(method(:onSensorData), options);
+        
+        // Start timer for activity info updates
+        timer = new Timer.Timer();
+        timer.start(method(:onTimer), 1000, true);
     }
 
     function stop() {
@@ -101,6 +106,41 @@ class DataManager {
         // Update UI
         if (uiCallback != null) {
             uiCallback.invoke(hr, currentZone, cadence);
+        }
+    }
+
+    function onTimer() as Void {
+        if (Activity has :getActivityInfo) {
+            var info = Activity.getActivityInfo();
+            if (info != null) {
+                var hr = info.currentHeartRate;
+                var cad = info.currentCadence;
+                
+                if (hr != null || cad != null) {
+                    processActivityData(hr, cad);
+                }
+            }
+        }
+    }
+
+    function processActivityData(hr, cadence) {
+        var currentTime = System.getTimer() / 1000;
+        
+        if (hr != null) {
+            if (currentTime - lastHRFeedbackTime >= HR_FEEDBACK_COOLDOWN) {
+                checkHeartRate(hr, currentTime);
+            }
+        }
+        
+        if (cadence != null) {
+            if (currentTime - lastCadenceFeedbackTime >= CADENCE_FEEDBACK_COOLDOWN) {
+                checkCadence(cadence, currentTime);
+            }
+        }
+
+        // Update UI
+        if (uiCallback != null) {
+            uiCallback.invoke(hr != null ? hr : "--", currentZone, cadence != null ? cadence : "--");
         }
     }
 

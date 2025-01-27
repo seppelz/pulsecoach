@@ -3,23 +3,43 @@
 ## [Unreleased]
 
 ### Added
-- Configurable heart rate zones through app settings
-- Configurable target speed and minimum stride length
-- New audio prompts for zone changes ("Moving up/down a zone")
-- New audio prompts for pace feedback ("Speed up!")
-- Cooldown timers to prevent too frequent audio feedback
-- More sophisticated pace calculation based on stride length and cadence
+- Configurable heart rate zones and target speed settings
+- Audio prompts for zone changes and pace feedback
+- Improved audio feedback system with customized tones and vibrations
+- Working simulator configuration with proper display and sensor panel access
+- Initial GitHub repository setup at https://github.com/seppelz/pulsecoach
+
+### Fixed
+- Simulator display and window management issues
+- Audio manager initialization and feedback timing
+- Data manager settings handling and defaults
 
 ### Changed
-- Improved audio feedback system with distinct tones and vibration patterns
-- Enhanced cadence monitoring with better pace calculations
-- Updated heart rate zone monitoring to provide feedback on zone changes
+- Simplified simulator startup script for better reliability
+- Improved error handling in settings loading
 
 ## [1.0.0] - 2024-03-20
+
 ### Added
-- Initial release of PulseCoach app
-- Real-time heart rate monitoring and feedback
-- Step size (stride length) analysis
-- Speed tracking and motivational prompts
-- Customizable target zones for heart rate and pace
-- Bluetooth audio prompt support 
+- Configurable heart rate zones and target speed settings
+- Audio prompts for zone changes and pace feedback
+- Improved audio feedback system with customized tones and vibrations
+- Dual sensor data handling (direct sensor and activity data)
+- Visual feedback with zone-specific colors and progress indicator
+- Initial GitHub repository setup at https://github.com/seppelz/pulsecoach
+
+### Fixed
+- Simulator sensor data handling by implementing both direct and activity data sources
+- Audio manager initialization and feedback timing
+- Data manager settings handling and defaults
+- Type safety in callback functions
+
+### Changed
+- Enhanced sensor data processing with robust null checks
+- Improved error handling in settings loading
+- Optimized UI updates for real-time data display
+
+### Technical Details
+- Added required permissions: Sensor, FitContributor, UserProfile
+- Implemented dual-source sensor data handling
+- Enhanced data processing pipeline for consistent UI updates 
